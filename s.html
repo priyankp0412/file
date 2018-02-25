@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js"></script>
+
+<link rel="stylesheet" href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" />
+</head>
+
+<body>
+<div class="wrap">
+<div class="photo">
+	<div></div>
+</div>
+<div class="photo2">
+	<div></div>
+</div>
+<div class="photo3">
+	<div></div>
+</div>
+</div>
+
+<div><img src="350x150.png" /></div>
+<script>
+//lightbox
+jQuery(document).ready(function() {
+	jQuery("img").click(function() {    
+		jQuery.fancybox.open(this.src);    
+		return false;    
+	});
+});
+fontresize = function () {
+    var fontSize = jQuery("#slider").height() * 0.34; 
+    jQuery("#slider_caption").css('font-size', fontSize);
+};
+jQuery(window).resize(fontresize);
+jQuery(window).load(fontresize);
+
+function setleft(){
+	$size =((jQuery(window).width() - jQuery(".header-wrap").width())/2);
+	jQuery(".logo-bg").css({'left':-($size)});
+}
+
+jQuery(window).on('load resize orientationchange', setleft);
+
+
+</script>
+<style>
+
+body {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;}
+* {box-sizing:border-box;-webkit-box-sizing:border-box;}
+.photo {
+    /*! transform: skewX(-25deg); */
+    /*! -ms-transform: skewX(-25deg); */
+    /*! -webkit-transform: skewX(-25deg); */
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+    /*! overflow: hidden; */
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    display: inline-block;
+    float: left;
+    left: 0px;
+    top: 0;
+    z-index: 9;
+    padding: 6.5% 0;
+}
+.photo::before {
+    content: "";
+    /*! transform: skewX(25deg); */
+    /*! -ms-transform: skewX(25deg); */
+    /*! -webkit-transform: skewX(25deg); */
+    background-image: url(https://www.solaireenergysystems.com/wp-content/uploads/2018/01/solar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    /*! -webkit-transform-origin: top left; */
+    /*! -ms-transform-origin: top left; */
+    /*! transform-origin: top left; */
+    width: 105%;
+    height: 100%;
+    top: 0;
+	    background-size: cover;
+}
+.photo2 {
+    transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    width: 33.33%;
+    height: 100%;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: 0 25%;
+    display: inline-block;
+    float: left;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    padding: 6.5% 0;
+}
+.photo2::before {
+    content: "";
+    transform: skewX(25deg);
+    -ms-transform: skewX(25deg);
+    -webkit-transform: skewX(25deg);
+    background-image: url(https://www.solaireenergysystems.com/wp-content/uploads/2018/01/hvac.jpg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    position: absolute;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 120%;
+    height: 100%;
+    left: -20%;
+    top: 0;
+	    background-size: cover;
+}
+.photo3 {
+    /*! transform: skewX(-25deg); */
+    /*! -ms-transform: skewX(-25deg); */
+    /*! -webkit-transform: skewX(-25deg); */
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+    /*! overflow: hidden; */
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    display: inline-block;
+    float: left;
+    top: 0;
+    /*! left: 71%; */
+    padding: 6.5% 0;
+}
+.photo3::before {
+    content: "";
+    /*! transform: skewX(25deg); */
+    /*! -ms-transform: skewX(25deg); */
+    /*! -webkit-transform: skewX(25deg); */
+    background-image: url(https://www.solaireenergysystems.com/wp-content/uploads/2018/01/roofing.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 115%;
+    height: 100%;
+    left: -15%;
+    top: 0;
+	    background-size: cover;
+}
+.wrap {
+    display: block;
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /*! padding: 6.5% 0; */
+}
+
+</style>
+
+<?php $ foo=$(printf "%02d" 5)
+$ echo "${foo}"
+05 ?>
+</body>
+</html>
